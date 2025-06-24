@@ -1,0 +1,10 @@
+/* @layer components {
+    .button {
+        @apply bg-[var(--bg-color)];
+    }
+
+    .container {
+        @apply w-full bg-[var(--bg-color)];
+    }
+
+} */
