@@ -7,7 +7,7 @@ import Header from "./Header"
 function DashboardLayout() {
     const isLoggedin = authStore((state) => state.isLoggedin)
     const login = authStore((state) => state.login)
-    const user = useLoaderData() as AuthStateUser | null; // type it properly if needed
+    const user = useLoaderData() as AuthStateUser | null;
 
     useEffect(() => {
         if (user) {
@@ -15,10 +15,9 @@ function DashboardLayout() {
         }
     }, [user, login]);
     return (
-        <div className="bg-amber-50">
-
+        <div className="bg-amber-50 text-black">
             <Header isLoggedin={isLoggedin} />
-            <main style={{ width: '100%', minHeight: '80dvh' }}>
+            <main className="w-full min-h-[80dvh]">
                 <Outlet />
             </main>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">

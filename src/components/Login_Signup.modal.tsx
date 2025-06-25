@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useLogin, type LoginData } from "../api/auth.api"
 import { useForm } from "../hooks/form.hooks"
-import { LOGIN, SIGN_UP } from "../utils/conts"
 
 function LoginSignupModal() {
     const [isLogin, setIsLogin] = useState(true)
@@ -21,7 +20,7 @@ function LoginSignupModal() {
                 <div className="modal-box bg-primary ">
                     <form className="card-body" onSubmit={onSubmit}>
                         <fieldset className="fieldset text-primary-content">
-                            <legend className="fieldset-legend text-primary-content text-4xl">{isLogin ? LOGIN : SIGN_UP} now</legend>
+                            <legend className="fieldset-legend text-primary-content text-4xl">{isLogin ? 'Login' : 'Sign up'} now</legend>
                             <label className="label">Username</label>
                             <input
                                 type="email"
@@ -39,10 +38,10 @@ function LoginSignupModal() {
                             {isLogin ?
                                 <>
                                     <div><a className="link link-hover">Forgot password?</a></div>
-                                    <button className="btn btn-neutral mt-4" type="submit">{LOGIN}</button>
+                                    <button className="btn btn-neutral mt-4" type="submit">{'LOGIN'}</button>
                                 </> :
                                 <>
-                                    <button className="btn btn-neutral mt-4" type="submit">{SIGN_UP}</button>
+                                    <button className="btn btn-neutral mt-4" type="submit">{'Sign up'}</button>
                                 </>
                             }
                         </fieldset>

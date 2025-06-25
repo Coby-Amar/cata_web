@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import type { UserModel } from '../models/user.model'
+import { ACCES_TOKEN } from '../utils/conts'
 
 export type AuthStateUser = Pick<UserModel, 'email' | 'username'>
 
@@ -24,6 +25,7 @@ const authStore = create<AuthState>((set) => ({
       user: null,
       isLoggedin: false,
     }))
+    localStorage.setItem(ACCES_TOKEN, '')
   },
 }))
 

@@ -4,6 +4,7 @@ import DashboardLayout from "../layouts/Dashboard/Dashboard.layout";
 import HomeRoute from "./Home.route";
 import appAxios from "../api/axios";
 import BookRoute from "./Book.route";
+import SettingsRoute from "./Settings.route";
 
 const router = createBrowserRouter([
     {
@@ -27,8 +28,8 @@ const router = createBrowserRouter([
                 Component: BookRoute,
             },
             {
-                path: '/book/:id',
-                Component: BookRoute,
+                path: '/settings',
+                Component: SettingsRoute,
             },
         ],
     }

@@ -9,7 +9,7 @@ interface WatchableState {
     addWatchables(watchables: WatchableModel[]): void
 }
 
-export const readableStore = create<WatchableState>((set) => ({
+export const watchableStore = create<WatchableState>((set) => ({
     watchables: [],
     setWatchable(watchables) {
         set(() => ({ watchables }))
